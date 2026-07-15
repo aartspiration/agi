@@ -8,8 +8,6 @@ const navLinks = [
 
 const comingSoon = [
   { title: "New case study", desc: "A deeper look at the work is on its way.", tags: ["UX", "Live-service"] },
-  { title: "New case study", desc: "A deeper look at the work is on its way.", tags: ["Design system"] },
-  { title: "New case study", desc: "A deeper look at the work is on its way.", tags: ["Research", "VR"] },
 ];
 
 const skills = [
@@ -89,7 +87,7 @@ export default function Home() {
               <span className="bg-[linear-gradient(100deg,var(--color-accent),var(--color-accent-2))] bg-clip-text text-transparent">
                 Agrippina
               </span>
-              , a Product Designer.
+              ,<span className="block">a Product Designer.</span>
             </h1>
             <p className="anim mx-auto mb-8 max-w-[54ch] text-xl leading-[1.45] text-ink-2 mob:mx-0">
               I make complex systems people can trust and act on, clear enough to make the right decision even
