@@ -416,12 +416,29 @@ export default function LibertyHarbor() {
               ))}
             </div>
 
-            <div className="mt-6 grid grid-cols-1 items-stretch gap-11 mob:grid-cols-[1fr_400px]">
-              <div className="space-y-6 text-lg leading-[1.62] text-ink-2">
-                <p>Expeditions were the best received part of the whole feature, scoring 4.0 out of 5 for both &quot;I understood the rewards&quot; and &quot;the requirements were clear.&quot;</p>
-                <p>That&apos;s the mechanic players learned by doing rather than reading, and the one that reused patterns they already knew from the main game. It confirmed what my UX test had already told me.</p>
+            <div className="mt-6 grid grid-cols-1 items-start gap-11 mob:grid-cols-[1fr_420px]">
+              <div className="flex flex-col gap-6">
+                <div className="space-y-6 text-lg leading-[1.62] text-ink-2">
+                  <p>Expeditions were the best received part of the whole feature, scoring 4.0 out of 5 for both &quot;I understood the rewards&quot; and &quot;the requirements were clear.&quot;</p>
+                  <p>That&apos;s the mechanic players learned by doing rather than reading, and the one that reused patterns they already knew from the main game. It confirmed what my UX test had already told me.</p>
+                </div>
+
+                <div className="rounded-2xl border border-hairline bg-surface p-6">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-[52px] font-semibold leading-none tracking-[-0.03em] text-accent">4.0</span>
+                    <span className="text-xl font-medium text-ink-3">/ 5</span>
+                  </div>
+                  <p className="mt-3 max-w-[42ch] text-[15px] leading-relaxed text-ink-2">
+                    Average score across both &quot;I understood the rewards&quot; and &quot;the requirements were clear&quot; — the highest-rated part of the feature.
+                  </p>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    <span className="rounded-md bg-tag-fill px-2.5 py-[5px] text-xs font-medium text-tag-text">Learned by doing</span>
+                    <span className="rounded-md bg-tag-fill px-2.5 py-[5px] text-xs font-medium text-tag-text">Reused patterns</span>
+                  </div>
+                </div>
               </div>
-              <figure className="flex flex-col rounded-2xl border border-hairline bg-surface p-4">
+
+              <figure className="flex flex-col overflow-hidden rounded-2xl border border-hairline bg-surface p-4">
                 <div className="mb-3.5 flex items-center gap-3">
                   <div className="flex h-[38px] w-[38px] flex-none items-center justify-center rounded-full bg-tag-fill text-sm font-bold text-accent">r/</div>
                   <div className="flex flex-col">
@@ -430,7 +447,7 @@ export default function LibertyHarbor() {
                   </div>
                 </div>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/liberty-outcome-shot.jpg" alt="A cat watching the Liberty Harbor screen, from a post on r/WorldOfWarships" className="block min-h-0 w-full flex-1 rounded-[10px] object-cover" />
+                <img src="/liberty-outcome-shot.jpg" alt="A cat watching the Liberty Harbor screen, from a post on r/WorldOfWarships" className="block w-full rounded-[10px] object-cover" />
               </figure>
             </div>
           </div>
