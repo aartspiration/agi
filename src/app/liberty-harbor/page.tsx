@@ -10,10 +10,28 @@ const meta = [
 ];
 
 const constraints = [
-  { h: "No design system.", t: "The main game's component library was off limits, and blur effects weren't technically possible. I built everything from scratch." },
-  { h: "The 3D scene never goes away.", t: "The harbour stays visible at all times, so full-screen modals were out. Every interaction had to live in a panel on top of it." },
-  { h: "Some choices can't be undone.", t: "A wrong upgrade can cost premium currency, which turns a design mistake into a real cost for the player." },
-  { h: "Five months, two of them mine.", t: "Design and research had two months, inside a five-month build, across a team of forty." },
+  { icon: "layers", tag: "No system", h: "No design system.", t: "The main game's component library was off limits, and blur effects weren't technically possible. I built everything from scratch." },
+  { icon: "eye", tag: "3D always on", h: "The 3D scene never goes away.", t: "The harbour stays visible at all times, so full-screen modals were out. Every interaction had to live in a panel on top of it." },
+  { icon: "lock", tag: "Irreversible", h: "Some choices can't be undone.", t: "A wrong upgrade can cost premium currency, which turns a design mistake into a real cost for the player." },
+  { icon: "clock", tag: "2 of 5 months", h: "Five months, two of them mine.", t: "Design and research had two months, inside a five-month build, across a team of forty." },
+];
+
+const constraintIcons: Record<string, React.ReactElement> = {
+  layers: (<><path d="M12 2 2 7l10 5 10-5-10-5Z" /><path d="m2 17 10 5 10-5" /><path d="m2 12 10 5 10-5" /></>),
+  eye: (<><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z" /><circle cx="12" cy="12" r="3" /></>),
+  lock: (<><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></>),
+  clock: (<><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></>),
+};
+
+const references = [
+  { name: "Frostpunk", meta: "Survival city-builder", took: "Overlay panels keep the frozen city in view while you manage every subsystem." },
+  { name: "IXION", meta: "Space-station builder", took: "Locked modules read as locked, and always show what unlocks them." },
+];
+
+const referenceTakeaways = [
+  "Keep the world visible. Both use overlay panels instead of full-screen modals, so you never lose your sense of place.",
+  "Make locked things obviously locked, and show what unlocks them.",
+  "Show the cost before the click, not after.",
 ];
 
 const typeScale = [
@@ -197,13 +215,24 @@ export default function LibertyHarbor() {
               <p>Liberty Harbor is a base you build inside World of Warships. Five areas, each doing a different job, all feeding one progress bar. Fill the bar and you win a ship.</p>
               <p>There was no earlier version to improve. Nothing in the game worked like it. So the shape of it was mine to decide, and I had four hard limits to work inside.</p>
             </Measure>
-            <ul className="mb-4 mt-[18px] max-w-[720px] space-y-3">
+            <div className="mt-8 grid grid-cols-1 gap-3 mob:grid-cols-2">
               {constraints.map((c) => (
-                <li key={c.h} className="relative pl-[22px] text-[17px] leading-[1.55] text-ink-2 before:absolute before:left-0.5 before:top-[11px] before:h-1.5 before:w-1.5 before:rounded-full before:bg-accent">
-                  <strong className="text-ink">{c.h}</strong> {c.t}
-                </li>
+                <div key={c.h} className="rounded-2xl border border-hairline bg-surface p-5">
+                  <div className="mb-3 flex items-center justify-between">
+                    <span className="flex h-10 w-10 flex-none items-center justify-center rounded-[11px] bg-tag-fill text-accent">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                        {constraintIcons[c.icon]}
+                      </svg>
+                    </span>
+                    <span className="rounded-full border border-hairline-strong px-2.5 py-1 text-[11px] font-medium uppercase tracking-[0.05em] text-ink-3">
+                      {c.tag}
+                    </span>
+                  </div>
+                  <p className="mb-1.5 text-[15px] font-semibold text-ink">{c.h}</p>
+                  <p className="text-sm leading-relaxed text-ink-2">{c.t}</p>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </section>
 
@@ -287,17 +316,37 @@ export default function LibertyHarbor() {
 
             <H3>Looking at games with the same problems</H3>
             <Measure>
-              <p><strong>Frostpunk</strong> and <strong>IXION</strong> are both base-builders with a persistent world view, multiple connected systems, and choices you can&apos;t take back. Exactly my situation. Three things I took from them:</p>
+              <p><strong>Frostpunk</strong> and <strong>IXION</strong> are both base-builders with a persistent world view, multiple connected systems, and choices you can&apos;t take back. Exactly my situation.</p>
             </Measure>
-            <ul className="mb-4 mt-[18px] max-w-[720px] space-y-3">
-              {[
-                "Keep the world visible. Both use overlay panels instead of full-screen modals, so you never lose your sense of place.",
-                "Make locked things obviously locked, and show what unlocks them.",
-                "Show the cost before the click, not after.",
-              ].map((t) => (
-                <li key={t} className="relative pl-[22px] text-[17px] leading-[1.55] text-ink-2 before:absolute before:left-0.5 before:top-[11px] before:h-1.5 before:w-1.5 before:rounded-full before:bg-accent">{t}</li>
+            <div className="mt-6 grid grid-cols-1 gap-4 mob:grid-cols-2">
+              {references.map((r) => (
+                <div key={r.name} className="rounded-2xl border border-hairline bg-surface p-5">
+                  <div className="mb-3 flex items-center gap-3">
+                    <span className="flex h-10 w-10 flex-none items-center justify-center rounded-[11px] bg-tag-fill text-accent">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                        <path d="M3 9h18" />
+                        <path d="M9 21V9" />
+                      </svg>
+                    </span>
+                    <div>
+                      <p className="text-[15px] font-semibold text-ink">{r.name}</p>
+                      <p className="text-xs text-ink-3">{r.meta}</p>
+                    </div>
+                  </div>
+                  <p className="text-sm leading-relaxed text-ink-2">{r.took}</p>
+                </div>
               ))}
-            </ul>
+            </div>
+
+            <div className="mt-4 rounded-2xl border border-hairline bg-white/[0.02] p-6">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.08em] text-accent">Three things I took from them</p>
+              <ul className="space-y-3">
+                {referenceTakeaways.map((t) => (
+                  <li key={t} className="relative pl-[22px] text-base leading-[1.55] text-ink-2 before:absolute before:left-0.5 before:top-[10px] before:h-1.5 before:w-1.5 before:rounded-full before:bg-accent">{t}</li>
+                ))}
+              </ul>
+            </div>
 
             <H3>Then I tested it</H3>
             <Measure>
@@ -372,9 +421,17 @@ export default function LibertyHarbor() {
               ))}
             </div>
 
-            <div className="my-6 max-w-[720px] rounded-r-xl border-l-[3px] border-accent bg-accent/[0.06] px-6 py-5">
-              <p className="text-[17px] text-ink">The principle underneath all of it: information is not learning. Players had been given the information. They still didn&apos;t know how the feature worked. What changed things was letting them learn by doing one small version of the real task.</p>
-            </div>
+            <figure className="relative my-10 overflow-hidden rounded-2xl border border-hairline bg-surface px-8 pb-10 pt-8 mob:px-12 mob:pt-10">
+              <span aria-hidden="true" className="pointer-events-none mb-1 block select-none font-serif text-[64px] leading-[0.5] text-accent/25">&ldquo;</span>
+              <blockquote className="relative">
+                <p className="text-[clamp(22px,3vw,30px)] font-semibold leading-[1.3] tracking-[-0.01em] text-ink">
+                  Information is not <span className="bg-[linear-gradient(100deg,var(--color-accent),var(--color-accent-2))] bg-clip-text text-transparent">learning.</span>
+                </p>
+                <p className="mt-4 max-w-[56ch] text-lg leading-[1.6] text-ink-2">
+                  Players had been given the information. They still didn&apos;t know how the feature worked. What changed things was letting them learn by doing one small version of the real task.
+                </p>
+              </blockquote>
+            </figure>
 
             <div className="mb-2 mt-12 grid grid-cols-1 items-center gap-10 mob:grid-cols-[1.3fr_1fr]">
               <div className="overflow-hidden rounded-2xl border border-hairline-strong bg-[#0d1c30] shadow-[0_30px_70px_rgba(0,0,0,0.45)]">
