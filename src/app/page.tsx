@@ -24,7 +24,7 @@ const skills = [
   {
     icon: "▲",
     title: "Tools & AI",
-    chips: ["Figma", "Illustrator", "Photoshop", "After Effects", "Miro", "Tableau", "AI-assisted design"],
+    chips: ["Figma", "After Effects", "Tableau", "AI-assisted design"],
   },
 ];
 
