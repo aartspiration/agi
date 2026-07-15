@@ -237,7 +237,7 @@ export default function LibertyHarbor() {
         </section>
 
         {/* tokens */}
-        <section className="py-24">
+        <section className="pt-24">
           <div className="mx-auto max-w-[1120px] px-6">
             <Label>Building the system</Label>
             <H2>Tokens before screens</H2>
@@ -306,7 +306,7 @@ export default function LibertyHarbor() {
         </section>
 
         {/* research */}
-        <section className="py-24">
+        <section className="pt-24">
           <div className="mx-auto max-w-[1120px] px-6">
             <Label>Process · Research</Label>
             <H2>I tested the prototype, and most of it failed</H2>
@@ -400,7 +400,7 @@ export default function LibertyHarbor() {
         </section>
 
         {/* what I changed */}
-        <section className="py-24">
+        <section className="pt-24">
           <div className="mx-auto max-w-[1120px] px-6">
             <Label>Process · What I changed</Label>
             <H2>Almost everything led to one fix</H2>
@@ -455,7 +455,7 @@ export default function LibertyHarbor() {
         </section>
 
         {/* outcome */}
-        <section className="py-24">
+        <section className="pt-24">
           <div className="mx-auto max-w-[1120px] px-6">
             <Label>After release</Label>
             <H2>What the players actually did</H2>
@@ -511,7 +511,7 @@ export default function LibertyHarbor() {
         </section>
 
         {/* insights */}
-        <section className="py-24">
+        <section className="pb-24 pt-24">
           <div className="mx-auto max-w-[1120px] px-6">
             <Label>What I took from it</Label>
             <H2>Three things I design by now</H2>
