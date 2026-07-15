@@ -179,7 +179,7 @@ export default function LibertyHarbor() {
             paralysed by choice and unclarity.
           </p>
 
-          <div className="mt-12 grid grid-cols-2 gap-6 border-y border-hairline py-6 mob:grid-cols-4">
+          <div className="mt-12 grid grid-cols-2 gap-6 py-6 mob:grid-cols-4">
             {meta.map((m) => (
               <div key={m.k}>
                 <div className="mb-2 text-xs font-medium uppercase tracking-[0.05em] text-ink-3">{m.k}</div>
@@ -272,8 +272,8 @@ export default function LibertyHarbor() {
 
             <div className="mt-9">
               {/* colour */}
-              <div className="mb-10 border-b border-hairline pb-10">
-                <div className="mb-6 flex items-baseline gap-4 border-b border-hairline-strong pb-3.5">
+              <div className="mb-14">
+                <div className="mb-6 flex items-baseline gap-4">
                   <span className="text-xs font-medium tabular-nums tracking-[.08em] text-accent">01</span>
                   <span className="flex-1 text-[17px] font-semibold tracking-[-.01em]">Colour</span>
                 </div>
@@ -290,15 +290,15 @@ export default function LibertyHarbor() {
               </div>
 
               {/* type */}
-              <div className="mb-10 border-b border-hairline pb-10">
-                <div className="mb-6 flex items-baseline gap-4 border-b border-hairline-strong pb-3.5">
+              <div className="mb-14">
+                <div className="mb-6 flex items-baseline gap-4">
                   <span className="text-xs font-medium tabular-nums tracking-[.08em] text-accent">02</span>
                   <span className="flex-1 text-[17px] font-semibold tracking-[-.01em]">Type</span>
                   <span className="text-xs tabular-nums text-ink-3">4 steps</span>
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col gap-4">
                   {typeScale.map((t) => (
-                    <div key={t.spec} className="flex items-baseline gap-7 border-b border-hairline py-3.5 last:border-b-0">
+                    <div key={t.spec} className="flex items-baseline gap-7">
                       <code className="min-w-[64px] text-[11px] tabular-nums text-ink-3">{t.spec}</code>
                       <span style={t.style}>{t.sample}</span>
                     </div>
@@ -308,7 +308,7 @@ export default function LibertyHarbor() {
 
               {/* spacing */}
               <div>
-                <div className="mb-6 flex items-baseline gap-4 border-b border-hairline-strong pb-3.5">
+                <div className="mb-6 flex items-baseline gap-4">
                   <span className="text-xs font-medium tabular-nums tracking-[.08em] text-accent">03</span>
                   <span className="flex-1 text-[17px] font-semibold tracking-[-.01em]">Spacing</span>
                   <span className="text-xs tabular-nums text-ink-3">4pt ramp</span>
@@ -379,7 +379,7 @@ export default function LibertyHarbor() {
 
             {/* hypothesis stats */}
             <div className="mt-9">
-              <div className="mb-2 grid grid-cols-2 gap-6 border-b border-hairline-strong pb-9 mob:grid-cols-4">
+              <div className="mb-2 grid grid-cols-2 gap-6 pb-4 mob:grid-cols-4">
                 {[
                   { fig: totals.written, cap: "Hypotheses written before testing", color: "text-ink" },
                   { fig: totals.supported, cap: "Supported", color: "text-[#5EEAD4]" },
@@ -400,10 +400,11 @@ export default function LibertyHarbor() {
                     {zone.items.map((it, i) => {
                       const st = statusMap[it.s as keyof typeof statusMap];
                       return (
-                        <div key={i} className="grid grid-cols-[auto_1fr_auto] items-center gap-3.5 border-b border-hairline py-3.5 mob:grid-cols-[auto_1fr_auto]">
-                          <span className={`h-[7px] w-[7px] flex-shrink-0 rounded-full ${st.dot}`} />
-                          <span className={`text-base leading-snug ${st.txt}`}>{it.t}</span>
-                          <span className={`whitespace-nowrap text-right text-xs font-medium uppercase tracking-[.04em] ${st.labelColor}`}>{st.label}</span>
+                        <div key={i} className="flex items-end gap-3.5 py-2">
+                          <span className={`mb-[6px] h-[7px] w-[7px] flex-shrink-0 rounded-full ${st.dot}`} />
+                          <span className={`flex-shrink-0 text-base leading-snug ${st.txt}`}>{it.t}</span>
+                          <span className="mb-[5px] min-w-[24px] flex-1 border-b border-dotted border-hairline-strong" />
+                          <span className={`flex-shrink-0 whitespace-nowrap text-right text-xs font-medium uppercase tracking-[.04em] ${st.labelColor}`}>{st.label}</span>
                         </div>
                       );
                     })}
