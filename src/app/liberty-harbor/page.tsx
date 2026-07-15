@@ -43,6 +43,13 @@ const typeScale = [
 
 const spacing = [4, 8, 12, 16, 24, 32, 48];
 
+const panelStates = [
+  { name: "Locked", note: "Not yet available — shows what unlocks it", color: "#8FA3BC" },
+  { name: "Active", note: "In progress, currently interactive", color: "#38BDF8" },
+  { name: "Completed", note: "Done — reward already claimed", color: "#2DD4BF" },
+  { name: "Error", note: "Blocked or over-cost, needs attention", color: "#F87171" },
+];
+
 const hypotheses = [
   { zone: "Lobby", items: [
     { s: "ok", t: "Understand how to navigate between areas" },
@@ -116,7 +123,7 @@ const H3 = ({ children }: { children: React.ReactNode }) => (
   <h3 className="mb-3.5 mt-10 text-xl font-semibold leading-snug">{children}</h3>
 );
 const Measure = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
-  <div className={`max-w-[720px] space-y-[18px] text-lg leading-[1.62] text-ink-2 [&_strong]:font-semibold [&_strong]:text-ink ${className}`}>
+  <div className={`max-w-[780px] space-y-[18px] text-lg leading-[1.62] text-ink-2 [&_strong]:font-semibold [&_strong]:text-ink ${className}`}>
     {children}
   </div>
 );
@@ -241,10 +248,27 @@ export default function LibertyHarbor() {
           <div className="mx-auto max-w-[1120px] px-6">
             <Label>Building the system</Label>
             <H2>Tokens before screens</H2>
-            <Measure>
-              <p>With no library to borrow from, the first thing I built wasn&apos;t a screen. It was the set of rules everything else would follow: colour, type, spacing, and every state a panel could be in.</p>
-              <p>The states mattered more than usual here. Because a wrong upgrade could cost real currency, I mapped locked, active, completed and error before any of it reached a developer, and made sure the cost of a choice was visible at the moment you make it, not buried in a dialog you might click past.</p>
-            </Measure>
+            <div className="grid grid-cols-1 gap-10 mob:grid-cols-[1fr_320px] mob:gap-14">
+              <Measure className="max-w-none">
+                <p>With no library to borrow from, the first thing I built wasn&apos;t a screen. It was the set of rules everything else would follow: colour, type, spacing, and every state a panel could be in.</p>
+                <p>The states mattered more than usual here. Because a wrong upgrade could cost real currency, I mapped locked, active, completed and error before any of it reached a developer, and made sure the cost of a choice was visible at the moment you make it, not buried in a dialog you might click past.</p>
+              </Measure>
+
+              <div className="rounded-2xl border border-hairline bg-surface p-5">
+                <p className="mb-4 text-xs font-semibold uppercase tracking-[0.08em] text-accent">Panel states</p>
+                <div className="flex flex-col">
+                  {panelStates.map((s) => (
+                    <div key={s.name} className="flex items-start gap-3 border-t border-hairline py-3 first:border-t-0 first:pt-0">
+                      <span className="mt-[6px] h-2.5 w-2.5 flex-none rounded-full" style={{ backgroundColor: s.color }} />
+                      <div>
+                        <p className="text-sm font-semibold text-ink">{s.name}</p>
+                        <p className="text-xs leading-relaxed text-ink-3">{s.note}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
 
             <div className="mt-9">
               {/* colour */}
@@ -393,7 +417,7 @@ export default function LibertyHarbor() {
               <p>The pattern was hard to miss. Anything players already knew from the main game, they understood straight away. Expedition requirements, assembling an expedition, reading ship tiers: all supported, because they had seen those patterns before.</p>
               <p>Anything new failed. Overcharge, Fleet Power, the mission counter, the status icons. Players didn&apos;t just find them difficult, they often didn&apos;t see them at all.</p>
             </Measure>
-            <div className="my-6 max-w-[720px] rounded-r-xl border-l-[3px] border-accent bg-accent/[0.06] px-6 py-5">
+            <div className="my-6 max-w-[780px] rounded-r-xl border-l-[3px] border-accent bg-accent/[0.06] px-6 py-5">
               <p className="text-[17px] text-ink">This is what changed my approach. The problem was never that the interactions were too complex. It was that new concepts had no way in. So instead of simplifying the deep mechanics, I focused on making things recognisable, and on teaching through doing rather than through text that nobody reads.</p>
             </div>
           </div>
@@ -427,7 +451,7 @@ export default function LibertyHarbor() {
                 <p className="text-[clamp(22px,3vw,30px)] font-semibold leading-[1.3] tracking-[-0.01em] text-ink">
                   Information is not <span className="bg-[linear-gradient(100deg,var(--color-accent),var(--color-accent-2))] bg-clip-text text-transparent">learning.</span>
                 </p>
-                <p className="mt-4 max-w-[56ch] text-lg leading-[1.6] text-ink-2">
+                <p className="mt-4 text-lg leading-[1.6] text-ink-2">
                   Players had been given the information. They still didn&apos;t know how the feature worked. What changed things was letting them learn by doing one small version of the real task.
                 </p>
               </blockquote>
