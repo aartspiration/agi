@@ -133,7 +133,15 @@ export default function Home() {
               href="/liberty-harbor"
               className="group relative block rounded-2xl border border-hairline bg-surface p-5 transition-all duration-200 before:absolute before:inset-x-0 before:top-0 before:h-px before:rounded-t-2xl before:bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent)] hover:-translate-y-0.5 hover:border-accent/40"
             >
-              <div className="mb-4 aspect-video rounded-[10px] bg-[linear-gradient(135deg,#295270,#12243B_55%,#1a3a5c)]" />
+              <div className="mb-4 aspect-video overflow-hidden rounded-[10px] bg-[linear-gradient(135deg,#295270,#12243B_55%,#1a3a5c)]">
+                <Image
+                  src="/liberty-harbor.jpg"
+                  alt="Liberty Harbor interface in World of Warships"
+                  width={640}
+                  height={360}
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                />
+              </div>
               <h3 className="mb-2 text-lg font-semibold">Liberty Harbor</h3>
               <p className="mb-4 text-[15px] text-ink-2">
                 A base-building feature for millions of players, with no design system and nothing to build on. 61%
