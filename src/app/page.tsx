@@ -186,22 +186,76 @@ export default function Home() {
         <div className="mx-auto max-w-[1120px] px-6">
           <Label>About</Label>
           <SectionTitle>Two very different worlds</SectionTitle>
-          <div className="max-w-[62ch] space-y-5 text-lg leading-[1.6] text-ink-2 [&_strong]:font-medium [&_strong]:text-ink">
-            <p>
-              I&apos;m a Senior Product Designer with more than six years of experience, split across two very
-              different worlds. The first was enterprise B2B: VR and AR solutions, ERP and HR systems for people who
-              live in software all day, where a small design choice either{" "}
-              <strong>saves someone time or quietly costs them an hour.</strong>
-            </p>
-            <p>
-              Now I design for <strong>World of Warships</strong>, one of the largest live-service games in the
-              world. The challenge flips here: not a handful of expert users, but millions of players making fast
-              decisions mid-match.
-            </p>
-            <p>
-              Currently open to roles where I can lead that work, turning complicated systems into things people
-              actually enjoy using.
-            </p>
+          <div className="grid grid-cols-1 gap-12 mob:grid-cols-[1fr_auto] mob:gap-16">
+            <div className="max-w-[62ch] space-y-5 text-lg leading-[1.6] text-ink-2 [&_strong]:font-medium [&_strong]:text-ink">
+              <p>
+                I&apos;m a Senior Product Designer with more than six years of experience, split across two very
+                different worlds. The first was enterprise B2B: VR and AR solutions, ERP and HR systems for people who
+                live in software all day, where a small design choice either{" "}
+                <strong>saves someone time or quietly costs them an hour.</strong>
+              </p>
+              <p>
+                Now I design for <strong>World of Warships</strong>, one of the largest live-service games in the
+                world. The challenge flips here: not a handful of expert users, but millions of players making fast
+                decisions mid-match.
+              </p>
+              <p>
+                Currently open to roles where I can lead that work, turning complicated systems into things people
+                actually enjoy using.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-stretch gap-3 mob:w-[300px]">
+              <div className="rounded-2xl border border-hairline bg-surface p-5">
+                <div className="mb-3 flex items-center gap-3">
+                  <span className="flex h-10 w-10 flex-none items-center justify-center rounded-[11px] bg-tag-fill text-accent">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                      <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                      <rect x="3" y="14" width="7" height="7" rx="1.5" />
+                      <rect x="14" y="14" width="7" height="7" rx="1.5" />
+                    </svg>
+                  </span>
+                  <div>
+                    <p className="text-[15px] font-semibold text-ink">Enterprise B2B</p>
+                    <p className="text-xs text-ink-3">Then</p>
+                  </div>
+                </div>
+                <p className="text-sm leading-relaxed text-ink-2">
+                  VR/AR, ERP &amp; HR systems. A handful of expert users, living in the software all day.
+                </p>
+              </div>
+
+              <div className="flex items-center justify-center gap-2 py-0.5 text-ink-3">
+                <span className="h-px w-8 bg-hairline-strong" />
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 5v14" />
+                  <path d="m19 12-7 7-7-7" />
+                </svg>
+                <span className="h-px w-8 bg-hairline-strong" />
+              </div>
+
+              <div className="rounded-2xl border border-accent/40 bg-accent/[0.04] p-5">
+                <div className="mb-3 flex items-center gap-3">
+                  <span className="flex h-10 w-10 flex-none items-center justify-center rounded-[11px] bg-tag-fill text-accent">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="6" y1="12" x2="10" y2="12" />
+                      <line x1="8" y1="10" x2="8" y2="14" />
+                      <line x1="15" y1="11" x2="15.01" y2="11" />
+                      <line x1="18" y1="13" x2="18.01" y2="13" />
+                      <path d="M17.32 5H6.68a4 4 0 0 0-3.98 3.6l-1.2 10A2.5 2.5 0 0 0 3.98 21.4a3 3 0 0 0 2.4-1.2L8 18h8l1.62 2.2a3 3 0 0 0 2.4 1.2 2.5 2.5 0 0 0 2.48-2.8l-1.2-10A4 4 0 0 0 17.32 5Z" />
+                    </svg>
+                  </span>
+                  <div>
+                    <p className="text-[15px] font-semibold text-ink">Live-service game</p>
+                    <p className="text-xs text-accent">Now</p>
+                  </div>
+                </div>
+                <p className="text-sm leading-relaxed text-ink-2">
+                  World of Warships. Millions of players making fast decisions mid-match.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
