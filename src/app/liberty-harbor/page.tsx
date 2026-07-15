@@ -485,7 +485,7 @@ export default function LibertyHarbor() {
             <Label>After release</Label>
             <H2>What the players actually did</H2>
             <Measure>
-              <p>Once the feature was live, I worked with the UX research and BI teams on a post-release analysis. This is the part I care most about, because it told me which of my decisions were right and which weren&apos;t.</p>
+              <p>Once the feature was live, I worked on a post-release analysis. This is the part I care most about, because it told me which of my decisions were right and which weren&apos;t.</p>
             </Measure>
 
             <H3>What worked</H3>
@@ -502,7 +502,7 @@ export default function LibertyHarbor() {
               <div className="flex flex-col gap-6">
                 <div className="space-y-6 text-lg leading-[1.62] text-ink-2">
                   <p>Expeditions were the best received part of the whole feature, scoring 4.0 out of 5 for both &quot;I understood the rewards&quot; and &quot;the requirements were clear.&quot;</p>
-                  <p>That&apos;s the mechanic players learned by doing rather than reading, and the one that reused patterns they already knew from the main game. It confirmed what my UX test had already told me.</p>
+                  <p>That&apos;s the mechanic players learned by doing rather than reading, and the one that reused patterns they already knew from the main game.</p>
                 </div>
 
                 <div className="rounded-2xl border border-hairline bg-surface p-6">

@@ -142,8 +142,7 @@ export default function Home() {
               </div>
               <h3 className="mb-2 text-lg font-semibold">Liberty Harbor</h3>
               <p className="mb-4 text-[15px] text-ink-2">
-                A base-building feature for millions of players, with no design system and nothing to build on. 61%
-                of the player base engaged with it.
+                A base-building feature for millions of players, with no design system and nothing to build on.
               </p>
               <div className="flex flex-wrap gap-2">
                 <Tag>0 to 1</Tag>
