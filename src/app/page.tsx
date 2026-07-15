@@ -66,7 +66,9 @@ export default function Home() {
               </a>
             ))}
             <a
-              href="#contact"
+              href="https://www.linkedin.com/in/agrippinaartemchuk"
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-lg border border-hairline-strong px-4 py-2 text-[15px] font-medium text-ink transition-colors hover:border-accent hover:bg-accent/[0.06]"
             >
               Get in touch
@@ -95,7 +97,9 @@ export default function Home() {
             </p>
             <div className="anim flex flex-wrap items-center justify-center gap-5 mob:justify-start">
               <a
-                href="mailto:agi.art@yahoo.com"
+                href="https://www.linkedin.com/in/agrippinaartemchuk"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-[10px] bg-ink px-[22px] py-[13px] text-[15px] font-semibold text-bg transition-all duration-200 hover:-translate-y-px hover:bg-white hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
               >
                 Get in touch
@@ -142,7 +146,8 @@ export default function Home() {
               </div>
               <h3 className="mb-2 text-lg font-semibold">Liberty Harbor</h3>
               <p className="mb-4 text-[15px] text-ink-2">
-                A base-building feature for millions of players, with no design system and nothing to build on.
+                A base-building feature for millions of players, with no design system and nothing to build on. 61%
+                of the player base engaged with it.
               </p>
               <div className="flex flex-wrap gap-2">
                 <Tag>0 to 1</Tag>

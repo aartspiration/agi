@@ -158,7 +158,7 @@ export default function LibertyHarbor() {
             <a href="/#work" className="text-[15px] text-ink-2 hover:text-ink">Work</a>
             <a href="/#about" className="text-[15px] text-ink-2 hover:text-ink">About</a>
             <a href="/#skills" className="text-[15px] text-ink-2 hover:text-ink">Skills</a>
-            <a href="mailto:agi.art@yahoo.com" className="rounded-lg border border-hairline-strong px-4 py-2 text-[15px] font-medium text-ink transition-colors hover:border-accent hover:bg-accent/[0.06]">
+            <a href="https://www.linkedin.com/in/agrippinaartemchuk" target="_blank" rel="noopener noreferrer" className="rounded-lg border border-hairline-strong px-4 py-2 text-[15px] font-medium text-ink transition-colors hover:border-accent hover:bg-accent/[0.06]">
               Get in touch
             </a>
           </div>
@@ -485,7 +485,7 @@ export default function LibertyHarbor() {
             <Label>After release</Label>
             <H2>What the players actually did</H2>
             <Measure>
-              <p>Once the feature was live, I worked on a post-release analysis. This is the part I care most about, because it told me which of my decisions were right and which weren&apos;t.</p>
+              <p>Once the feature was live, I worked with the UX research and BI teams on a post-release analysis. This is the part I care most about, because it told me which of my decisions were right and which weren&apos;t.</p>
             </Measure>
 
             <H3>What worked</H3>
@@ -502,7 +502,7 @@ export default function LibertyHarbor() {
               <div className="flex flex-col gap-6">
                 <div className="space-y-6 text-lg leading-[1.62] text-ink-2">
                   <p>Expeditions were the best received part of the whole feature, scoring 4.0 out of 5 for both &quot;I understood the rewards&quot; and &quot;the requirements were clear.&quot;</p>
-                  <p>That&apos;s the mechanic players learned by doing rather than reading, and the one that reused patterns they already knew from the main game.</p>
+                  <p>That&apos;s the mechanic players learned by doing rather than reading, and the one that reused patterns they already knew from the main game. It confirmed what my UX test had already told me.</p>
                 </div>
 
                 <div className="rounded-2xl border border-hairline bg-surface p-6">
