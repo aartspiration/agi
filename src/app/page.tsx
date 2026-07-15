@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <>
@@ -14,24 +16,35 @@ export default function Home() {
       </nav>
 
       <header className="hero">
-        <div className="wrap">
-          <span className="status anim">
-            <span className="dot"></span> Available for new roles
-          </span>
-          <h1 className="anim">
-            Hi, I&apos;m <span className="name">Agrippina</span>, a Product Designer.
-          </h1>
-          <p className="lead anim">
-            I make complex systems people can trust and act on, clear enough to
-            make the right decision even when things are confusing or stressful.
-          </p>
-          <div className="cta-row anim">
-            <a href="mailto:agi.art@yahoo.com" className="btn">
-              Get in touch
-            </a>
-            <a href="#work" className="text-link">
-              View work →
-            </a>
+        <div className="wrap hero-inner">
+          <div className="hero-text">
+            <span className="status anim">
+              <span className="dot"></span> Available for new roles
+            </span>
+            <h1 className="anim">
+              Hi, I&apos;m <span className="name">Agrippina</span>, a Product Designer.
+            </h1>
+            <p className="lead anim">
+              I make complex systems people can trust and act on, clear enough to
+              make the right decision even when things are confusing or stressful.
+            </p>
+            <div className="cta-row anim">
+              <a href="mailto:agi.art@yahoo.com" className="btn">
+                Get in touch
+              </a>
+              <a href="#work" className="text-link">
+                View work →
+              </a>
+            </div>
+          </div>
+          <div className="hero-photo anim">
+            <Image
+              src="/agi.jpeg"
+              alt="Agrippina Artemchuk"
+              width={360}
+              height={360}
+              priority
+            />
           </div>
         </div>
       </header>
