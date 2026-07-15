@@ -28,12 +28,21 @@ html {
   text-rendering: optimizeLegibility;
 }
 body {
-  background-color: var(--color-bg);
+  font-family: var(--font-sans);
   color: var(--color-ink);
+  background-color: var(--color-bg);
   background-image:
     radial-gradient(1100px 560px at 50% -8%, rgba(45, 212, 191, 0.13), transparent 70%),
     radial-gradient(900px 500px at 100% 0%, rgba(56, 189, 248, 0.07), transparent 60%);
   background-attachment: fixed;
+}
+
+/* Inter everywhere: override Tailwind preflight's mono default on these tags */
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--font-sans);
 }
 
 /* ---- entrance animation (keyframes can't live in a utility) ---- */

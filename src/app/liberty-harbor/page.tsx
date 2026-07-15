@@ -422,7 +422,7 @@ export default function LibertyHarbor() {
             </div>
 
             <figure className="relative my-10 overflow-hidden rounded-2xl border border-hairline bg-surface px-8 pb-10 pt-8 mob:px-12 mob:pt-10">
-              <span aria-hidden="true" className="pointer-events-none mb-1 block select-none font-serif text-[64px] leading-[0.5] text-accent/25">&ldquo;</span>
+              <span aria-hidden="true" className="pointer-events-none mb-1 block select-none text-[64px] font-semibold leading-[0.5] text-accent/25">&ldquo;</span>
               <blockquote className="relative">
                 <p className="text-[clamp(22px,3vw,30px)] font-semibold leading-[1.3] tracking-[-0.01em] text-ink">
                   Information is not <span className="bg-[linear-gradient(100deg,var(--color-accent),var(--color-accent-2))] bg-clip-text text-transparent">learning.</span>
