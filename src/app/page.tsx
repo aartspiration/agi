@@ -158,17 +158,21 @@ export default function Home() {
               <article
                 key={i}
                 aria-disabled="true"
-                className="relative cursor-not-allowed rounded-2xl border border-hairline bg-surface p-5 opacity-55 saturate-[0.7]"
+                className="relative cursor-not-allowed rounded-2xl border border-hairline bg-surface p-5"
               >
-                <div className="mb-4 aspect-video rounded-[10px] bg-[linear-gradient(135deg,#1a3a5c,#0e2138_60%,#13314f)] grayscale-[0.35]" />
-                <span className="mb-3 inline-block rounded-full border border-hairline-strong bg-white/5 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.06em] text-ink-3">
-                  Coming soon
-                </span>
-                <h3 className="mb-2 text-lg font-semibold">{c.title}</h3>
-                <p className="mb-4 text-[15px] text-ink-2">{c.desc}</p>
+                <div className="mb-4 grid aspect-video place-items-center rounded-[10px] border border-hairline bg-[linear-gradient(135deg,#1a3a5c,#0e2138_60%,#13314f)]">
+                  <span className="text-[15px] font-semibold uppercase tracking-[0.14em] text-ink-3">Coming soon</span>
+                </div>
+                <h3 className="mb-2 text-lg font-semibold text-ink-2">{c.title}</h3>
+                <p className="mb-4 text-[15px] text-ink-3">{c.desc}</p>
                 <div className="flex flex-wrap gap-2">
                   {c.tags.map((t) => (
-                    <Tag key={t}>{t}</Tag>
+                    <span
+                      key={t}
+                      className="rounded-md border border-hairline bg-white/[0.03] px-2.5 py-[5px] text-xs font-medium text-ink-3"
+                    >
+                      {t}
+                    </span>
                   ))}
                 </div>
               </article>
