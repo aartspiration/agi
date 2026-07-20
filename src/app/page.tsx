@@ -105,10 +105,11 @@ export default function Home() {
                 Get in touch
               </a>
               <a
-                href="#work"
+                href="/Agrippina-Artemchuk-CV.pdf"
+                download
                 className="border-b border-hairline-strong pb-0.5 text-base font-medium text-ink-2 transition-colors hover:border-accent hover:text-accent"
               >
-                View work →
+                Download CV ↓
               </a>
             </div>
           </div>
