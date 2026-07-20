@@ -7,7 +7,7 @@ const navLinks = [
 ];
 
 const comingSoon = [
-  { title: "New case", desc: "The case on creating a virtual reality training app interface for a major oil company.", tags: ["UX", "Live-service"] },
+  { title: "Training high-stakes work in VR", desc: "Immersive VR Training and LMS that let field engineers rehearse dangerous procedures before doing them for real.", tags: ["UX", "Enterprise", "Oil & Gas sector", "Interaction", "Design"] },
 ];
 
 const skills = [
