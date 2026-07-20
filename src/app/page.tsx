@@ -24,7 +24,7 @@ const skills = [
   {
     icon: "▲",
     title: "Tools & AI",
-    chips: ["Figma", "After Effects", "Tableau", "AI-assisted design"],
+    chips: ["Figma", "Tableau", "AI-assisted design"],
   },
 ];
 
@@ -137,7 +137,7 @@ export default function Home() {
             >
               <div className="mb-4 aspect-video overflow-hidden rounded-[10px] bg-[linear-gradient(135deg,#295270,#12243B_55%,#1a3a5c)]">
                 <Image
-                  src="/liberty-harbor.jpg"
+                  src="/liberty-harbor.png"
                   alt="Liberty Harbor interface in World of Warships"
                   width={640}
                   height={360}
@@ -146,8 +146,7 @@ export default function Home() {
               </div>
               <h3 className="mb-2 text-lg font-semibold">Liberty Harbor</h3>
               <p className="mb-4 text-[15px] text-ink-2">
-                A base-building feature for millions of players, with no design system and nothing to build on. 61%
-                of the player base engaged with it.
+                A base-building feature for millions of players, with no design system and nothing to build on.
               </p>
               <div className="flex flex-wrap gap-2">
                 <Tag>0 to 1</Tag>
@@ -192,7 +191,7 @@ export default function Home() {
             <div className="max-w-[62ch] space-y-5 text-lg leading-[1.6] text-ink-2 [&_strong]:font-medium [&_strong]:text-ink">
               <p>
                 I&apos;m a Senior Product Designer with more than six years of experience, split across two very
-                different worlds. The first was enterprise B2B: VR and AR solutions, ERP and HR systems for people who
+                different worlds. The first was enterprise B2B: VR and AR solutions, LMS and HR systems for people who
                 live in software all day, where a small design choice either{" "}
                 <strong>saves someone time or quietly costs them an hour.</strong>
               </p>
@@ -224,7 +223,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-sm leading-relaxed text-ink-2">
-                  VR/AR, ERP &amp; HR systems. A handful of expert users, living in the software all day.
+                  VR/AR, LMS &amp; HR systems. A handful of expert users, living in the software all day.
                 </p>
               </div>
 

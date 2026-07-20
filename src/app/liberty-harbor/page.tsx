@@ -23,17 +23,6 @@ const constraintIcons: Record<string, React.ReactElement> = {
   clock: (<><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></>),
 };
 
-const references = [
-  { name: "Frostpunk", meta: "Survival city-builder", took: "Overlay panels keep the frozen city in view while you manage every subsystem." },
-  { name: "IXION", meta: "Space-station builder", took: "Locked modules read as locked, and always show what unlocks them." },
-];
-
-const referenceTakeaways = [
-  "Keep the world visible. Both use overlay panels instead of full-screen modals, so you never lose your sense of place.",
-  "Make locked things obviously locked, and show what unlocks them.",
-  "Show the cost before the click, not after.",
-];
-
 const typeScale = [
   { spec: "24 / 600", sample: "Panel title", style: { fontSize: "24px", fontWeight: 600, letterSpacing: "-.01em" } },
   { spec: "18 / 600", sample: "Header", style: { fontSize: "18px", fontWeight: 600 } },
@@ -44,9 +33,9 @@ const typeScale = [
 const spacing = [4, 8, 12, 16, 24, 32, 48];
 
 const panelStates = [
-  { name: "Locked", note: "Not yet available — shows what unlocks it", color: "#8FA3BC" },
+  { name: "Locked", note: "Not yet available - shows what unlocks it", color: "#8FA3BC" },
   { name: "Active", note: "In progress, currently interactive", color: "#38BDF8" },
-  { name: "Completed", note: "Done — reward already claimed", color: "#2DD4BF" },
+  { name: "Completed", note: "Done - reward already claimed", color: "#2DD4BF" },
   { name: "Error", note: "Blocked or over-cost, needs attention", color: "#F87171" },
 ];
 
@@ -90,7 +79,7 @@ const fixes = [
 
 const stats = [
   { n: "61%", l: "of players visited the base at least once" },
-  { n: "83%", l: "who reached Expeditions successfully sent ships" },
+  { n: "83%", l: "who reached Expeditions  knew how to send ships with no instructions needed" },
   { n: "71%", l: "said the rewards were clear and took little effort" },
   { n: "51%", l: "came back and sent five or more expeditions" },
 ];
@@ -338,40 +327,6 @@ export default function LibertyHarbor() {
               <p>There was no data to start from. No previous version of this feature, nothing internal to benchmark against. So I did two things: I looked at games that had already solved my exact problems, and then I tested my own prototype with real players before we built it.</p>
             </Measure>
 
-            <H3>Looking at games with the same problems</H3>
-            <Measure>
-              <p><strong>Frostpunk</strong> and <strong>IXION</strong> are both base-builders with a persistent world view, multiple connected systems, and choices you can&apos;t take back. Exactly my situation.</p>
-            </Measure>
-            <div className="mt-6 grid grid-cols-1 gap-4 mob:grid-cols-2">
-              {references.map((r) => (
-                <div key={r.name} className="rounded-2xl border border-hairline bg-surface p-5">
-                  <div className="mb-3 flex items-center gap-3">
-                    <span className="flex h-10 w-10 flex-none items-center justify-center rounded-[11px] bg-tag-fill text-accent">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-                        <rect x="3" y="3" width="18" height="18" rx="2" />
-                        <path d="M3 9h18" />
-                        <path d="M9 21V9" />
-                      </svg>
-                    </span>
-                    <div>
-                      <p className="text-[15px] font-semibold text-ink">{r.name}</p>
-                      <p className="text-xs text-ink-3">{r.meta}</p>
-                    </div>
-                  </div>
-                  <p className="text-sm leading-relaxed text-ink-2">{r.took}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-4 rounded-2xl border border-hairline bg-white/[0.02] p-6">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.08em] text-accent">Three things I took from them</p>
-              <ul className="space-y-3">
-                {referenceTakeaways.map((t) => (
-                  <li key={t} className="relative pl-[22px] text-base leading-[1.55] text-ink-2 before:absolute before:left-0.5 before:top-[10px] before:h-1.5 before:w-1.5 before:rounded-full before:bg-accent">{t}</li>
-                ))}
-              </ul>
-            </div>
-
             <H3>Then I tested it</H3>
             <Measure>
               <p>I ran a moderated UX test on the prototype with 5-6 experienced players. Before the sessions I wrote out what I expected players to understand on each screen, so the results could be scored rather than argued about.</p>
@@ -472,7 +427,7 @@ export default function LibertyHarbor() {
                 <p className="mb-3.5 text-xs font-semibold uppercase tracking-[0.08em] text-accent">In the product</p>
                 <div className="space-y-3.5 text-base leading-relaxed text-ink-2">
                   <p>Upgrade path: the Fuel Terminal area boost. The locked Military Port states exactly what unlocks it, and the panel shows what you get for it.</p>
-                  <p>Cost and reward sit together at the moment of the decision — not buried in a dialog you might click past.</p>
+                  <p>Cost and reward sit together at the moment of the decision - not buried in a dialog you might click past.</p>
                 </div>
               </div>
             </div>
