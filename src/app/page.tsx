@@ -7,7 +7,7 @@ const navLinks = [
 ];
 
 const comingSoon = [
-  { title: "New case study", desc: "A deeper look at the work is on its way.", tags: ["UX", "Live-service"] },
+  { title: "New case", desc: "The case on creating a virtual reality training app interface for a major oil company.", tags: ["UX", "Live-service"] },
 ];
 
 const skills = [
@@ -146,7 +146,7 @@ export default function Home() {
               </div>
               <h3 className="mb-2 text-lg font-semibold">Liberty Harbor</h3>
               <p className="mb-4 text-[15px] text-ink-2">
-                A base-building feature for millions of players, with no design system and nothing to build on.
+                The base-building feature for millions of players, with no design system and nothing to build on.
               </p>
               <div className="flex flex-wrap gap-2">
                 <Tag>0 to 1</Tag>
