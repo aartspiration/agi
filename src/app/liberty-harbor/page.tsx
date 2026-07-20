@@ -437,7 +437,7 @@ export default function LibertyHarbor() {
             </Measure>
 
             <div className="mt-9 grid grid-cols-1 items-stretch gap-6 mob:grid-cols-[1fr_420px]">
-              <div className="relative flex flex-col justify-center overflow-hidden rounded-2xl border border-hairline bg-surface p-8 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent)]">
+              <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-2xl border border-hairline bg-surface p-8 text-center before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent)]">
                 <div className="text-[clamp(64px,10vw,104px)] font-semibold leading-none tracking-[-0.03em] text-accent">71%</div>
                 <p className="mt-5 max-w-[34ch] text-lg leading-relaxed text-ink-2">said the rewards were clear and took little effort</p>
               </div>
