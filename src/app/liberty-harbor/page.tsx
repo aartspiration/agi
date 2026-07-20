@@ -77,13 +77,6 @@ const fixes = [
   { found: "Players didn't understand the upgrade system. They didn't notice the button, and didn't know what unlocked what.", did: "Made the upgrade path more visible, and built the flow so players have to use it once. After that, they know it exists." },
 ];
 
-const stats = [
-  { n: "61%", l: "of players visited the base at least once" },
-  { n: "83%", l: "who reached Expeditions  knew how to send ships with no instructions needed" },
-  { n: "71%", l: "said the rewards were clear and took little effort" },
-  { n: "51%", l: "came back and sent five or more expeditions" },
-];
-
 const insights = [
   { h: "Let people learn by doing", b: "One guided pass through the real task teaches more than any amount of explanation. Wherever the first action decides whether someone comes back, build the first action, not the manual." },
   { h: "Borrow the mental model people already have", b: "Familiar patterns work instantly. New ones ask someone to learn something at the exact moment they are trying to act. Consistency is a design decision, not a compromise." },
@@ -443,36 +436,10 @@ export default function LibertyHarbor() {
               <p>Once the feature was live, I worked with the UX research and BI teams on a post-release analysis. This is the part I care most about, because it told me which of my decisions were right and which weren&apos;t.</p>
             </Measure>
 
-            <H3>What worked</H3>
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-4">
-              {stats.map((s) => (
-                <div key={s.l} className="relative overflow-hidden rounded-2xl border border-hairline bg-surface p-6 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent)]">
-                  <div className="text-[42px] font-semibold leading-none tracking-[-0.02em] text-accent">{s.n}</div>
-                  <div className="mt-2.5 text-sm leading-tight text-ink-2">{s.l}</div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-6 grid grid-cols-1 items-start gap-11 mob:grid-cols-[1fr_420px]">
-              <div className="flex flex-col gap-6">
-                <div className="space-y-6 text-lg leading-[1.62] text-ink-2">
-                  <p>Expeditions were the best received part of the whole feature, scoring 4.0 out of 5 for both &quot;I understood the rewards&quot; and &quot;the requirements were clear.&quot;</p>
-                  <p>That&apos;s the mechanic players learned by doing rather than reading, and the one that reused patterns they already knew from the main game. It confirmed what my UX test had already told me.</p>
-                </div>
-
-                <div className="rounded-2xl border border-hairline bg-surface p-6">
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-[52px] font-semibold leading-none tracking-[-0.03em] text-accent">4.0</span>
-                    <span className="text-xl font-medium text-ink-3">/ 5</span>
-                  </div>
-                  <p className="mt-3 max-w-[42ch] text-[15px] leading-relaxed text-ink-2">
-                    Average score across both &quot;I understood the rewards&quot; and &quot;the requirements were clear&quot; — the highest-rated part of the feature.
-                  </p>
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    <span className="rounded-md bg-tag-fill px-2.5 py-[5px] text-xs font-medium text-tag-text">Learned by doing</span>
-                    <span className="rounded-md bg-tag-fill px-2.5 py-[5px] text-xs font-medium text-tag-text">Reused patterns</span>
-                  </div>
-                </div>
+            <div className="mt-9 grid grid-cols-1 items-stretch gap-6 mob:grid-cols-[1fr_420px]">
+              <div className="relative flex flex-col justify-center overflow-hidden rounded-2xl border border-hairline bg-surface p-8 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent)]">
+                <div className="text-[clamp(64px,10vw,104px)] font-semibold leading-none tracking-[-0.03em] text-accent">71%</div>
+                <p className="mt-5 max-w-[34ch] text-lg leading-relaxed text-ink-2">said the rewards were clear and took little effort</p>
               </div>
 
               <figure className="flex flex-col overflow-hidden rounded-2xl border border-hairline bg-surface p-4">
