@@ -204,15 +204,12 @@ export default function Home() {
                 <div className="mb-3 flex items-center gap-3">
                   <span className="flex h-10 w-10 flex-none items-center justify-center rounded-[11px] bg-tag-fill text-accent">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      <line x1="6" y1="12" x2="10" y2="12" />
-                      <line x1="8" y1="10" x2="8" y2="14" />
-                      <line x1="15" y1="11" x2="15.01" y2="11" />
-                      <line x1="18" y1="13" x2="18.01" y2="13" />
-                      <path d="M17.32 5H6.68a4 4 0 0 0-3.98 3.6l-1.2 10A2.5 2.5 0 0 0 3.98 21.4a3 3 0 0 0 2.4-1.2L8 18h8l1.62 2.2a3 3 0 0 0 2.4 1.2 2.5 2.5 0 0 0 2.48-2.8l-1.2-10A4 4 0 0 0 17.32 5Z" />
+                      <rect x="2" y="5" width="20" height="14" rx="2" />
+                      <line x1="2" y1="10" x2="22" y2="10" />
                     </svg>
                   </span>
                   <div>
-                    <p className="text-[15px] font-semibold text-ink">Real-time transactions.</p>
+                    <p className="text-[15px] font-semibold text-ink">Real-time transactions</p>
                     <p className="text-xs text-accent">Now</p>
                   </div>
                 </div>
