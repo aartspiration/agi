@@ -322,7 +322,7 @@ export default function VrTrainingLms() {
         {/* bonus: AI redesign */}
         <section className="border-t border-hairline py-14 mob:py-24">
           <div className="mx-auto max-w-[1080px] px-6">
-            <Label>Bonus · 2026 redesign</Label>
+            <Label>2026 redesign</Label>
             <H2>Revisiting it with AI in the loop</H2>
             <Measure>
               <p>Years later I came back to the same product to push it further, and used AI to move faster through the parts that usually slow a redesign down. The goal was a denser, more functional interface that surfaced even more of what each user needed, without losing the legibility of the original.</p>
@@ -338,8 +338,7 @@ export default function VrTrainingLms() {
 
             <Callout>
               The split that kept it honest: AI did the fast first pass, gathering, generating, scaffolding. The
-              judgement, the information hierarchy, and the final calls stayed mine. That’s what made a redesign of this
-              size possible in the time I had.
+              judgement, the information hierarchy, and the final calls stayed mine.
             </Callout>
 
             {shots2026.map((s) => (
