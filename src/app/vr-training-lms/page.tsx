@@ -238,7 +238,7 @@ export default function VrTrainingLms() {
             <Label>Research</Label>
             <H2>Eleven interviews, two very different users</H2>
             <Measure>
-              <p>I interviewed 5 HR and L&amp;D HR managers and 6 engineers myself. I wanted the same thing from both: what does your day actually look like, where does this training fit into it, and what frustrated them about it. The answers split so cleanly along role lines that two personas wrote themselves.</p>
+              <p>I interviewed 5 HR and L&amp;D HR managers and 6 engineers myself. I wanted the same thing from both: what does your day actually look like, where does this training fit into it, and what frustrated them about it. </p>
             </Measure>
 
             <div className="mt-7 grid grid-cols-1 gap-4 mob:grid-cols-2">
