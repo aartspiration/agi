@@ -1,13 +1,10 @@
+import Link from "next/link";
 import Image from "next/image";
 
 const navLinks = [
   { href: "#work", label: "Work" },
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
-];
-
-const comingSoon = [
-  { title: "Training high-stakes work in VR", desc: "Immersive VR Training and LMS that let field engineers rehearse dangerous procedures before doing them for real.", tags: ["UX", "Enterprise", "Oil & Gas sector", "Interaction", "Design"] },
 ];
 
 const skills = [
@@ -234,7 +231,7 @@ export default function Home() {
           <Label>Selected Work</Label>
           <SectionTitle>Recent projects</SectionTitle>
           <div className="grid grid-cols-1 gap-6 mob:grid-cols-2">
-            <a
+            <Link
               href="/liberty-harbor"
               className="group relative block rounded-2xl border border-hairline bg-surface p-5 transition-all duration-200 before:absolute before:inset-x-0 before:top-0 before:h-px before:rounded-t-2xl before:bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent)] hover:-translate-y-0.5 hover:border-accent/40"
             >
@@ -256,31 +253,32 @@ export default function Home() {
                 <Tag>UX Research</Tag>
                 <Tag>Design Systems</Tag>
               </div>
-            </a>
+            </Link>
 
-            {comingSoon.map((c, i) => (
-              <article
-                key={i}
-                aria-disabled="true"
-                className="relative cursor-not-allowed rounded-2xl border border-hairline bg-surface p-5"
-              >
-                <div className="mb-4 grid aspect-video place-items-center rounded-[10px] border border-hairline bg-[linear-gradient(135deg,#1a3a5c,#0e2138_60%,#13314f)]">
-                  <span className="text-[15px] font-semibold uppercase tracking-[0.14em] text-ink-3">Coming soon</span>
-                </div>
-                <h3 className="mb-2 text-lg font-semibold text-ink-2">{c.title}</h3>
-                <p className="mb-4 text-[15px] text-ink-3">{c.desc}</p>
-                <div className="flex flex-wrap gap-2">
-                  {c.tags.map((t) => (
-                    <span
-                      key={t}
-                      className="rounded-md border border-hairline bg-white/[0.03] px-2.5 py-[5px] text-xs font-medium text-ink-3"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </article>
-            ))}
+            <Link
+              href="/vr-training-lms"
+              className="group relative block rounded-2xl border border-hairline bg-surface p-5 transition-all duration-200 before:absolute before:inset-x-0 before:top-0 before:h-px before:rounded-t-2xl before:bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent)] hover:-translate-y-0.5 hover:border-accent/40"
+            >
+              <div className="mb-4 aspect-video overflow-hidden rounded-[10px] bg-[linear-gradient(135deg,#1a3a5c,#0e2138_60%,#13314f)]">
+                <Image
+                  src="/vr-lms/2026-hr-dashboard.jpg"
+                  alt="The VR training LMS dashboard for HR managers"
+                  width={640}
+                  height={360}
+                  className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
+                />
+              </div>
+              <h3 className="mb-2 text-lg font-semibold">Training high-stakes work in VR</h3>
+              <p className="mb-4 text-[15px] text-ink-2">
+                Immersive VR training and an LMS that let field engineers rehearse dangerous procedures before doing
+                them for real.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Tag>UX Research</Tag>
+                <Tag>Enterprise</Tag>
+                <Tag>VR &amp; LMS</Tag>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
