@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "Liberty Harbor · Case Study · Agrippina Artemchuk",
 };
@@ -135,11 +137,11 @@ export default function LibertyHarbor() {
       {/* nav */}
       <nav className="sticky top-0 z-20 border-b border-hairline bg-bg/70 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-[1120px] items-center justify-between px-6">
-          <a href="/" className="font-semibold tracking-[-0.01em]">Agrippina Artemchuk</a>
+          <Link href="/" className="font-semibold tracking-[-0.01em]">Agrippina Artemchuk</Link>
           <div className="hidden items-center gap-8 mob:flex">
-            <a href="/#work" className="text-[15px] text-ink-2 hover:text-ink">Work</a>
-            <a href="/#about" className="text-[15px] text-ink-2 hover:text-ink">About</a>
-            <a href="/#skills" className="text-[15px] text-ink-2 hover:text-ink">Skills</a>
+            <Link href="/#work" className="text-[15px] text-ink-2 hover:text-ink">Work</Link>
+            <Link href="/#about" className="text-[15px] text-ink-2 hover:text-ink">About</Link>
+            <Link href="/#skills" className="text-[15px] text-ink-2 hover:text-ink">Skills</Link>
             <a href="https://www.linkedin.com/in/agrippinaartemchuk" target="_blank" rel="noopener noreferrer" className="rounded-lg border border-hairline-strong px-4 py-2 text-[15px] font-medium text-ink transition-colors hover:border-accent hover:bg-accent/[0.06]">
               Get in touch
             </a>
@@ -150,7 +152,7 @@ export default function LibertyHarbor() {
       {/* hero */}
       <header className="pb-14 pt-24 mob:pt-24">
         <div className="mx-auto max-w-[1120px] px-6">
-          <a href="/#work" className="mb-6 inline-block text-[15px] font-medium text-ink-2 transition-colors hover:text-accent">← All work</a>
+          <Link href="/#work" className="mb-6 inline-block text-[15px] font-medium text-ink-2 transition-colors hover:text-accent">← All work</Link>
           <p className="mb-[18px] text-[13px] font-medium uppercase tracking-[0.06em] text-accent">Case Study 01 · World of Warships</p>
           <h1 className="mb-6 text-[clamp(40px,7vw,68px)] font-semibold leading-[1.04] tracking-[-0.025em]">
             Liberty{" "}
@@ -479,7 +481,7 @@ export default function LibertyHarbor() {
 
       <footer className="border-t border-hairline py-12">
         <div className="mx-auto flex max-w-[1120px] flex-wrap items-center justify-between gap-4 px-6">
-          <a href="/#work" className="border-b border-accent pb-0.5 text-base font-medium text-ink">← Back to all work</a>
+          <Link href="/#work" className="border-b border-accent pb-0.5 text-base font-medium text-ink">← Back to all work</Link>
           <span className="text-sm text-ink-3">Agrippina Artemchuk · © 2026</span>
         </div>
       </footer>
