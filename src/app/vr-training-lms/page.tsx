@@ -93,7 +93,7 @@ const shots2026 = [
   {
     src: "/vr-lms/2026-billing.jpg",
     alt: "The 2026 redesigned billing console with an overdue banner, summary cards and a status-coded invoice table",
-    cap: "2026: billing, rebuilt around consequence. An overdue balance is a banner that says what it blocks, not a row you have to notice.",
+    cap: "2026: billing, rebuilt around consequence.",
   },
   {
     src: "/vr-lms/2026-catalogue.jpg",
