@@ -138,8 +138,9 @@ export default function Home() {
                   <strong>saves someone time or quietly costs them an hour.</strong>
                 </p>
                 <p>
-                  Now I design for <strong> World of Warship </strong>, one of the largest live-service games in the world, including its in-game store,
-                  where millions of buyers browse, weigh bundles, and make fast, high-stakes decisions at the moment of purchase.
+                  Now I design for <strong>World of Warships</strong>, one of the largest live-service games in the
+                  world, including its in-game store, where millions of buyers browse, weigh bundles, and make fast,
+                  high-stakes decisions at the moment of purchase.
                 </p>
                 <p>
                   Currently open to roles where I can lead that work, turning complicated systems into things people
