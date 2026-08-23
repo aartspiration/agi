@@ -86,7 +86,7 @@ export default function Home() {
               <span className="bg-[linear-gradient(100deg,var(--color-accent),var(--color-accent-2))] bg-clip-text text-transparent">
                 Agrippina
               </span>
-              ,<span className="block">a Product Designer.</span>
+              ,<span className="block">a Senior Product Designer.</span>
             </h1>
             <p className="anim mx-auto mb-8 max-w-[54ch] text-xl leading-[1.45] text-ink-2 mob:mx-0">
               I make complex systems people can trust and act on, clear enough to make the right decision even
@@ -138,9 +138,8 @@ export default function Home() {
                   <strong>saves someone time or quietly costs them an hour.</strong>
                 </p>
                 <p>
-                  Now I design for <strong>World of Warships</strong>, one of the largest live-service games in the
-                  world. The challenge flips here: not a handful of expert users, but millions of players making fast
-                  decisions mid-match.
+                  Now I design for <strong> World of Warship </strong>, one of the largest live-service games in the world, including its in-game store,
+                  where millions of buyers browse, weigh bundles, and make fast, high-stakes decisions at the moment of purchase.
                 </p>
                 <p>
                   Currently open to roles where I can lead that work, turning complicated systems into things people
@@ -212,12 +211,12 @@ export default function Home() {
                     </svg>
                   </span>
                   <div>
-                    <p className="text-[15px] font-semibold text-ink">Live-service game</p>
+                    <p className="text-[15px] font-semibold text-ink">Real-time transactions.</p>
                     <p className="text-xs text-accent">Now</p>
                   </div>
                 </div>
                 <p className="text-sm leading-relaxed text-ink-2">
-                  World of Warships. Millions of players making fast decisions mid-match.
+                  Purchase flows for millions of players: currency, bundles, and checkout where hesitation costs the sale.
                 </p>
               </div>
             </div>
